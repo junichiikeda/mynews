@@ -28,4 +28,4 @@ Route::controller(AAAController::class)->prefix('admin')->group(function() {
 });
 
 Route::get('/admin/profile/create','ProfileController@add');
-Route::get('/admin/profile/edit','ProfileController@edit');
+Route::get('/admin/profile/create','ProfileController@edit');
