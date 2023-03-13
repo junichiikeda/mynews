@@ -24,8 +24,11 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 
 // 課題3
 Route::controller(AAAController::class)->prefix('admin')->group(function() {
-    Route::get('bbb', 'add');
-});
+    Route::get('bbb', 'Action');
+}); 
 
-Route::get('/admin/profile/create','ProfileController@add');
-Route::get('/admin/profile/create','ProfileController@edit');
+use App\Http\Controllers\Admin\ProfileController;
+Route::controller(ProfileController::class)->prefix('admin')->group(function() {
+    Route::get('profile/create', 'add');
+    Route::get('profile/edit', 'edit');
+});
