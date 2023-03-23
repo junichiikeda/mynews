@@ -27,4 +27,11 @@ class ProfileController extends Controller
     {
         return redirect('admin/profile/edit');
     }
+    
+    // 08 ニュース投稿画面を作成しよう 課題6
+    public function update()
+    {
+        return view('admin.profile.edit');
+    }
+
 }
