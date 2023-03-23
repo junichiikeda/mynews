@@ -9,7 +9,8 @@
     <article>
         <h1>プロフィール入力フォーム</h1>
         <p>下記入力フォームよりアンケートのご入力をお願いします。</p>
-            <form action="{{ route('Admin.ProfileController. create') }}" method="post">
+            <form action="{{ route('admin.profile.create') }}" method="post">
+            
             <P><label>お名前(name)</br>
             <input type=""text name="name"></label></P>
             <p>性別(gender)
@@ -23,5 +24,5 @@
         
         </form>
     </article>
-</body>
+<!--</body>
 </html>
