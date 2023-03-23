@@ -44,7 +44,8 @@ use App\Http\Controllers\Admin\ProfileController;
 
 // 課題3 (08 ニュース投稿画面を作成しよう)
 Route::controller(ProfileController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function () {
-   Route::post('Profile/create', 'create')->name('Profile.create');
+   Route::get('profile/create', 'add')->name('profile.add');
+   Route::post('profile/create', 'create')->name('profile.create');
 });
 
 Auth::routes();
