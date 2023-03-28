@@ -1,14 +1,15 @@
+@extends('layouts.profile')
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>プロフィール入力フォーム</title>
 </head>
-<body>
+<body> -->
     <article>
-        <h1>プロフィール入力フォーム</h1>
-        <p>下記入力フォームよりアンケートのご入力をお願いします。</p>
+        <h1></h1>
+        <p>下記フォームよりプロフィールのご入力をお願いします。</p>
             <form action="{{ route('admin.profile.create') }}" method="post">
             
             <P><label>お名前(name)</br>
@@ -24,5 +25,5 @@
         
         </form>
     </article>
-<!--</body>
+</body>
 </html>
