@@ -42,10 +42,13 @@ use App\Http\Controllers\Admin\ProfileController;
     Route::get('profile/edit', 'edit')->middleware('auth');
 }); */
 
-// 課題3 (08 ニュース投稿画面を作成しよう)
+// 課題6 (08 ニュース投稿画面を作成しよう)
 Route::controller(ProfileController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+   Route::get('profile/create', 'add')->middleware('auth');
+   Route::get('profile/edit', 'edit')->middleware('auth');
    Route::get('profile/create', 'add')->name('profile.add');
    Route::post('profile/create', 'create')->name('profile.create');
+   Route::post('profile/create', 'edit')->name('profile.edit');
 });
 
 Auth::routes();
