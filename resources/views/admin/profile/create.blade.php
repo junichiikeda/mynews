@@ -2,10 +2,9 @@
 @section('title', 'プロフィールの新規作成')
 @section('content')
 
-    <article>
-        <h1></h1>
-        <p>下記フォームよりプロフィールのご入力をお願いします。</p>
-            <form action="{{ route('admin.profile.create') }}" method="post">
+    <div class="container">
+        <h2下記フォームよりプロフィールのご入力をお願いします。></h2>
+        <form action="{{ route('admin.profile.create') }}" method="post">
                 
             @if (count($errors) > 0)
                 <ul>
@@ -22,11 +21,11 @@
                 <label><input type="radio" name="gender" value="female">女性</label>
             </p>
             <p><label>趣味(hobby)</br>
-            <textarea name="comment" cols="30" rows="5"></textarea></label></p>
+            <textarea name="hobby" cols="30" rows="5"></textarea></label></p>
             <p><label>自己紹介(introduction)</br>
-            <textarea name="comment" cols="30" rows="20" placeholder="こちらに入力してください"></textarea></label></p>
+            <textarea name="introduction" cols="30" rows="15" placeholder="こちらに入力してください"></textarea></label></p>
             @csrf
             <input type="submit" class="btn btn-primary" value="更新">
         </form>
-    </article>
+    </div>
 @endsection
