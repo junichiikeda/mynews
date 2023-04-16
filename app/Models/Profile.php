@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
+   // 参照させたいSQLのテーブル名を指定
+   protected $table = 'profile';
+   
     use HasFactory;
     
-     protected $guarded = array('id');
+    protected $guarded = array('id');
 
     public static $rules = array(
         'name' => 'required',
@@ -17,4 +20,10 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required',
     );
+    
+     // Profile Modelに関連付けを行う
+    public function profile_histories()
+    {
+        return $this->hasMany('App\Models\ProfileHistory');
+    }
 }
