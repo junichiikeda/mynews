@@ -15,7 +15,7 @@
             @endif
             
             <P><label>お名前(name)</br>
-            <input type=""text name="name"></label></P>
+            <input type="text" name="name"></label></P>
             <p>性別(gender)
                 <label><input type="radio" name="gender" value="male">男性</label>
                 <label><input type="radio" name="gender" value="female">女性</label>
